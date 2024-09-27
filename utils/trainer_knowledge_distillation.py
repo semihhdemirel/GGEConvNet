@@ -132,7 +132,10 @@ class Train_Knowledge_Distillation:
             LOGGER.info(f"Starting Fold {self.args.fold}/{self.args.num_folds}")
             teacher_model = GGEConvNet_Large().to(device)
             teacher_checkpoint = torch.load(self.args.teacher_model_path)
-            teacher_model.load_state_dict(teacher_checkpoint["model_state_dict"])
+            if "model_state_dict" in teacher_checkpoint:
+                teacher_model.load_state_dict(teacher_checkpoint["model_state_dict"])
+            else:
+                teacher_model.load_state_dict(teacher_checkpoint)
             teacher_model = teacher_model.to(device)
             student_model = GGEConvNet_Small().to(device)
             optimizer = optim.Adam(student_model.parameters(), lr=self.args.learning_rate)
