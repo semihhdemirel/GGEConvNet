@@ -45,7 +45,6 @@ python split_dataset_into_folds.py --input-dir <path_to_dataset> --output-dir <o
 ```bash
 python create_validating.py --fold-dir <path_to_fold_dataset>
 ```
-
 After splitting the dataset into multiple folds, the dataset structure should be as follows:
 
 ```plaintext
@@ -102,7 +101,10 @@ python train_knowledge_distillation.py --fold-dir ./fold_dataset --teacher-model
 
 ### 1. test.py
 
-**Description**: Evaluates the trained model's performances. To test the models the structure of checkpoints should be as follows:
+**Description**: Evaluates the trained model's performances. To test the models the structure of checkpoints should be as follows: 
+
+The training, testing and validating data can be downloaded using the following URL: [Fold Dataset](https://drive.google.com/file/d/1KPtA88ITmXXn26jYl8xnIt-QN8ySzJt4/view?usp=sharing)
+The checkpoints can be downloaded using the following URL: [Checkpoints](https://drive.google.com/file/d/1SppjdjHgpbh7dBBSZY_Ur5gHQaHbOGyf/view?usp=sharing)
 
 ```plaintext
 ├── ckpt/
