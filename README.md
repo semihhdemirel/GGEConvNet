@@ -101,7 +101,7 @@ python train_knowledge_distillation.py --fold-dir ./fold_dataset --teacher-model
 
 ### 1. test.py
 
-**Description**: Evaluates the trained model's performances. To test the models the structure of checkpoints should be as follows: 
+**Description**: Evaluates the trained model's performances. To test the models the structure should be as follows: 
 
 The training, testing and validating data can be downloaded using the following URL: [Fold Dataset](https://drive.google.com/file/d/1KPtA88ITmXXn26jYl8xnIt-QN8ySzJt4/view?usp=sharing)
 
